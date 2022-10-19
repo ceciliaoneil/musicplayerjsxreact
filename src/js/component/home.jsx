@@ -30,6 +30,7 @@ const Home = () => {
 		etiquetaAudio.current.src = `https://assets.breatheco.de/apis/sound/${linkName}`
     etiquetaAudio.current.play();
 		setPlay(i)
+    
 	}
 
 	const playMusic = () => {
@@ -45,7 +46,7 @@ const Home = () => {
 }
 
 const nextMusic = () => {
-  if (pocisionMusica <= lista.length -1) {
+  if (pocisionMusica < lista.length -1) {
     setPocisionMusica(pocisionMusica+1);
   } else { setPocisionMusica(0);}
   etiquetaAudio.current.src = `https://assets.breatheco.de/apis/sound/${lista[pocisionMusica].url}`
